@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+body{font-family: 'Open Sans', sans-serif;background-color: #fbfbfb;color: #586270;font-size: 16px;}
+.slider{font-family: 'Courgette', cursive;}
+.ust-menu{
+    background: #497cbb; /* Old browsers */
+    background: -moz-linear-gradient(top,  #497cbb 0%, #1857a4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#497cbb), color-stop(100%,#1857a4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #497cbb 0%,#1857a4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #497cbb 0%,#1857a4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #497cbb 0%,#1857a4 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #497cbb 0%,#1857a4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#497cbb', endColorstr='#1857a4',GradientType=0 ); /* IE6-9 */
+    height: 70px;
+}
+.ust-menu > div, .ust-menu > div .row{height: inherit;}
+.ust-menu .logo{display: inline-block;float: left;margin-right: 50px;position: absolute;z-index: 99;margin-top: 0;}
+.ust-menu .menu-link, .ust-menu .diller{display: inline-block;float:right;}
+.ust-menu .menu-link a{color: white;font-weight: bold;font-size: 16px;margin-right: 15px;margin-left: 15px;line-height: 70px;text-decoration: none;}
+.ust-menu .menu-link a:hover{border-bottom: 3px solid;}
+.ust-menu .diller a{color: white;font-size: 16px;margin-right: 5px;margin-left: 5px;line-height: 70px;}
+.ust-menu .diller a.active{color: #04a6f7;}
+.carousel-caption{font-size: 45px;color: #04a6f7;}
+.carousel-caption span{font-size: 69px;color: #1857a4;display: inline-block;margin-top: -10px;}
+.slider{border-bottom: 200px solid #1857a4; margin-bottom: -155px;}
+.ana-kutu{background-color: white;border-bottom: 3px solid #04a6f7;margin-bottom: 40px;}
+.ana-kutu h2{font-size: 24px;}
+.ana-kutu p{font-size: 16px; color: #586270;text-align: justify;margin-bottom: 20px;margin-top: 30px;}
+.btn1{text-decoration: none;display: inline-block;border: 1px solid #ccd6e3;padding: 5px 10px;color: #1857a4;font-weight: bold;font-size: 15px;}
+.btn1:hover, .btn1:focus{text-decoration: none;border: 1px solid #1857a4;}
+.btn1>i{text-decoration: none;color: #ccd6e3;font-size: 20px;margin-right: 5px;}
+.btn1:hover>i{color: #1857a4;}
+.flr{float: right;}
+.ana-hbr{margin-bottom: 40px;margin-top: 40px;}
+.ana-hbr img{float: left;}
+.ana-hbr .hbr-yazi{padding-left: 10px;display: table;}
+.footer .copy{background-color: #e6ecf4;margin-top: 80px;line-height: 120px;}
+.footer .falt{background: url(../img/footerbg.png) no-repeat #d9e3ee;padding-top: 30px;}
+.alt-linkler a {float: left;clear: both;line-height: 40px;color: #045384;}
+.alt-linkler div{height: 160px;padding-top: 20px;padding-bottom: 20px;border-left: 1px solid #b5c4cc;padding-left: 40px;}
+.alt-linkler div:last-child{border-right: 1px solid #b5c4cc;}
+.fulasim {margin-top: 40px;border-top: 1px solid #b5c4cc;padding-top: 30px;margin-bottom: 80px;}
+.fulasim span{margin-right:15px;}
+.fulasim span>img{margin-right:5px;}
+
+@media (min-width:992px) and (max-width:1200px){
+    .logo img{width: 85%;}
+    .ust-menu .menu-link a{font-size: 14px;margin-left: 10px;margin-right: 10px;}
+}
