@@ -6,7 +6,7 @@ namespace Lib;
  * STNC FW
  * Copyright (c) 2015
  * Author(s): Selman TUNÇ www.selmantunc.com <selmantunc@gmail.com>
-
+ *
  * @todo webofisim db de eklenecek
  * @author Selman TUNÇ <selmantunc@gmail.com>
  * @copyright Copyright (c) 2015 SELMAN TUNÇ
@@ -29,7 +29,7 @@ class Database extends PDO implements DatabaseInterface
     /**
      * Static method get
      *
-     * @param array $group
+     * @param array $group            
      * @return \lib\database
      */
     public static function get($group = false)
@@ -98,7 +98,7 @@ class Database extends PDO implements DatabaseInterface
      *            sql query
      * @param array $array
      *            named params
-     * @param object $fetchMode
+     * @param object $fetchMode            
      * @return array returns an array of records
      * @example en iyi ornekl sayfalar model içinde vardır getKategoriSayfalar
      */
@@ -106,7 +106,7 @@ class Database extends PDO implements DatabaseInterface
     {
         if ($fetchMode == 'array') {
             $fetchMode = PDO::FETCH_ASSOC;
-        } else
+        } else 
             if ($fetchMode == 'object') {
                 $fetchMode = PDO::FETCH_OBJ;
             }
@@ -125,6 +125,27 @@ class Database extends PDO implements DatabaseInterface
     }
 
     /**
+     * json data return
+     */
+    public function ToJson()
+    {
+        if ($fetchMode == 'array') {
+            $fetchMode = PDO::FETCH_ASSOC;
+        } else 
+            if ($fetchMode == 'object') {
+                $fetchMode = PDO::FETCH_OBJ;
+            }
+        
+        $stmt = $this->prepare($sql, array(
+            PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => false
+        ));
+        
+        $stmt->execute();
+        
+        return $stmt->fetch($fetchMode);
+    }
+
+    /**
      * method for single row selecting records from a database
      * tek bir datayı/kolon bilgisini gönderir
      *
@@ -132,17 +153,16 @@ class Database extends PDO implements DatabaseInterface
      *            sql query
      * @param array $array
      *            named params
-     * @param object $fetchMode
+     * @param object $fetchMode            
      * @return array returns an array of records
      */
     public function fetch($sql, $fetchMode = 'array')
     {
         if ($fetchMode == 'array') {
             $fetchMode = PDO::FETCH_ASSOC;
-        } else
-            if ($fetchMode == 'object') {
-                $fetchMode = PDO::FETCH_OBJ;
-            }
+        } elseif ($fetchMode == 'object') {
+            $fetchMode = PDO::FETCH_OBJ;
+        }
         
         $stmt = $this->prepare($sql, array(
             PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => false
@@ -210,7 +230,7 @@ class Database extends PDO implements DatabaseInterface
             $i ++;
         }
         $whereDetails = ltrim($whereDetails, ' AND ');
-         $s = "UPDATE $table SET $fieldDetails WHERE $whereDetails";
+        $s = "UPDATE $table SET $fieldDetails WHERE $whereDetails";
         
         $stmt = $this->prepare($s);
         
