@@ -4,19 +4,21 @@ namespace Core;
 use Memcache;
 
 /**
- * SAVEAS FRAMEWORK
+
  *
  * Copyright (c) 2015
  *
  * Author(s): Selman TUNÇ www.selmantunc.com <selmantunc@gmail.com>
  * model yapısı
- *
+ * memchache desteği eklendi 
  * @author Selman TUNÇ <selmantunc@gmail.com>
  * @copyright Copyright (c) 2015 SAVEAS YAZILIM
  * @link http://github.com/stnc
- * @link http://www.saveas.com.tr/
+
  * @version 2.0.0.1
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License
+ * @example     modelden verilecek değer    $key = __FUNCTION__ . $stok_altgrup . $marka_idleri . $ozellik_idler;
+        return parent::Cache_init($key, $q, 'rows');
  */
 abstract class Model extends Controller
 {
