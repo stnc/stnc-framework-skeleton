@@ -27,7 +27,10 @@ date_default_timezone_set('Europe/Istanbul');
 //burası birkaç yeri etkiler silmeyin
 define('ENVIRONMENT', 'development'); // production / development
                                       
-
+//memcache options
+define('MEMCACHED_HOST', '127.0.0.1');
+define('MEMCACHED_PORT', '11211');
+define('MEMCACHED_STATUS', false); //memcache aktif olup olmayacağını belirtir 
 
 /*
  * ---------------------------------------------------------------
