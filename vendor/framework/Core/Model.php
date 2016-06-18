@@ -18,7 +18,7 @@ use Memcache;
  * @version 2.0.0.1
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License
  * @example     modelden verilecek değer    $key = __FUNCTION__ . $stok_altgrup . $marka_idleri . $ozellik_idler;
-        return parent::Cache_init($key, $q, 'rows');
+ *       return parent::Cache_init($key, $q, 'rows');
  */
 abstract class Model extends Controller
 {
