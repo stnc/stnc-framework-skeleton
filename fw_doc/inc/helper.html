@@ -1,0 +1,67 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3> Helpers</h3>
+			<hr class="notop">
+		</div>
+		
+
+
+<p>Helper Fonksiyonu
+<br>
+Helper'lar, isimlerinden de anlaşıldığı gibi, size yardımcılardır. 
+Kod kalabalığını önlemek ve temiz kod yazımı için sizde kendi fonksiyonlarınızı 
+helper olarak yazabilir ve orada tutabilirsiniz.
+<br>
+<br>Her helper dosyası belli kategorilerde fonskiyonları basitçe toparlar.
+ mesela URL Helper link oluşturmada ve linkle ilgili işlerde  yardımcı olur, 
+<br>
+STNC FW de  diğer sistemlerden farkı, Helper'lar nesne tabanı formatında yazılmamışlardır.
+Basit ve prosedürel fonsiyonlardır. 
+<br>Her helper fonksiyonu bir görev için diğer fonksiyonlara bağlı olmadan çalışır.
+<br>
+STNC FW Helper dosyalarını açılışta yüklemez, bu yüzden ilk adım Helper dosyasını yüklemektir. 
+veya _construct içine sürekli kullanılacak olan helperları yazabilirsiniz 
+<br>
+Helperlar  app/helpers dizini altındadır.<br>
+</p>
+
+<div class="page-header">
+	<h3> Helper Yüklemek</h3>
+	<hr class="notop">
+</div>
+
+test için gerekli route adresi 
+<pre><code class="language-php">
+Router::any('helper', '\Controllers\ornekController@helperlar');
+//http://cms.dev/helper
+</code></pre>
+
+Control dosyası 
+
+<pre>
+<code class="language-php">
+namespace Controllers;
+// controller namespace ini kullanacağımı bildirdim
+use \Core\Controller as controller;
+class OrnekController extends controller
+{
+    /**
+     * Ornek 9 helper yuklemek
+     * helper
+     */
+    public function helperlar()
+    {
+        $test=new \Helpers\URL_Helper();
+        echo   $test->url_adresi($url);
+    }
+}
+</code>
+</pre>
+				
+</div>
+</div>

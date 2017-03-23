@@ -1,0 +1,51 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3>Ayarlar</h3>
+			<hr class="notop">
+		</div>
+		
+		<p> framework un çalışma ayarları  app/core/config.php dosyasını açınız</p>
+
+<pre><code class="language-php">
+date_default_timezone_set('Europe/London');
+</code></pre>
+
+<p>Web sitesinin çalışma adresini belirtiniz</p>
+<pre><code class="language-php">
+define('DIR','http://example.com/');
+</code></pre>
+
+<p>Veritabanı için gerekli ayarları belirtin</p>
+<pre>
+<code class="language-php">
+define('DB_TYPE','mysql');
+define('DB_HOST','localhost');
+define('DB_NAME','database name');
+define('DB_USER','root');
+define('DB_PASS','root');
+define('PREFIX','smvc_');
+</code>
+</pre>
+
+<p>
+Veritabanı öneki isteğe bağlıdır ,sınırlı hostinglerde  veritabanınızdaki tabloların yada karmaşık erp yapılarında tabloların çakışmasını önelmek için tavsiye edilir.
+</p>
+
+<p>Session helper class, bu öneke göre hareket eder.</p>
+<pre><code class="language-php">
+define('SESSION_PREFIX','smvc_');
+</code></pre>
+
+<p>Tam klasörü yapılandırması</p>
+
+<pre><code class="language-php">
+\helpers\session::set('template','default');
+</code></pre>
+				
+</div>
+	</div>

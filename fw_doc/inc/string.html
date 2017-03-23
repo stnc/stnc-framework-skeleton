@@ -1,0 +1,219 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+
+		<div class="page-header">
+			<h3>String SINIFI</h3>
+			<hr class="notop">
+		</div>
+		<b>String sınıfı sayısal ve metin karakterler üzerinde işlemler
+			yapılmasında kolaylıklar sağlar <br> kelime işlemleri yazının
+			,tümünü büyük harf yap, ilk harfinin büyük yap, tümünü küçük yap gibi
+			işlemler bulunur
+		</b> <br>
+		<div class="alert alert-danger">Bazı fonksiyonlar sadece
+			e-ticaret için geliştirilmiştir</div>
+
+
+		<div class="page-header">
+			<h3>replaceSpace fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<p>string deki başındaki ve sonundaki tüm boşlukları temizler</p>
+
+
+
+		<pre>
+			<code class="language-php">
+        $string=new \Lib\Strings();
+      echo   $string-> replaceSpace(' merhababa dsskdşlskd dslkdskdsş d ');
+</code>
+		</pre>
+
+		<br />
+
+
+
+		<div class="page-header">
+			<h3>Hecele (Kelimeyi hecelere ayırır)</h3>
+			<hr class="notop">
+		</div>
+
+		<pre>
+<code class="language-php">
+$str = "lorem ipsum ,lorem ipsum,lorem ipsum ,lorem ipsum,lorem ipsum ,lorem ipsum,lorem ipsum ,lorem ipsum";
+$string=new \Lib\Strings();
+$string->Hecele($str,2);
+</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>adSoyadParcala (Adı ve soyadı parçalar )</h3>
+			<hr class="notop">
+		</div>
+
+		<p>İki isimli olanlarda mesela "mehmet ali alacadağ" adı ve soyadı
+			parçalar</p>
+		<pre>
+			<code class="language-php">
+         $adSoyad="mehmet ali alacadağ";
+         $isim= $string->adSoyadParcala($adSoyad);
+         print_r($isim);
+         
+         //çıktısı 
+         Array
+	(
+    [adi] => mehmet ali
+    [soyadi] => alacadağ
+	)
+</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>cevir_artiya</h3>
+			<hr class="notop">
+		</div>
+
+		<p>İki isimli olanlarda mesela "mehmet ali alacadağ" adı ve soyadı
+			parçalar</p>
+		<pre>
+			<code class="language-php">
+         $adSoyad="mehmet ali alacadağ";
+         $isim= $string->adSoyadParcala($adSoyad);
+         print_r($isim);
+         
+         //çıktısı 
+         Array
+	(
+    [adi] => mehmet ali
+    [soyadi] => alacadağ
+	)
+</code>
+		</pre>
+
+
+
+
+
+
+
+		<div class="page-header">
+			<h3>slug</h3>
+			<hr class="notop">
+		</div>
+
+		<p>Yazılan metni link biçimi olacak hale getirir.</p>
+		<pre>
+			<code class="language-php">
+ 
+         
+         $sr="mehmet ali alacadağ";
+        echo $string->slug($sr);
+</code>
+		</pre>
+
+
+
+		<div class="page-header">
+			<h3>kelime_arama</h3>
+			<hr class="notop">
+		</div>
+
+		<p>metin içinde kelimenin olup olmadığına bakar</p>
+		<pre>
+			<code class="language-php">
+              $metin="merhaba ali veli deli hasan";
+         $aranacak="ali";
+        echo  $string-> kelime_arama($metin, $aranacak);
+	</code>
+		</pre>
+
+
+
+		<div class="page-header">
+			<h3>strto_tr_lower_upper</h3>
+			<hr class="notop">
+		</div>
+
+		<p>
+			bu metod bir dizgede bulunan büyük veya küçük harflerin tamamını
+			küçük veya büyük harflere türkçe karakterleri bozmadan çevirir. iki
+			parametre alır lower ve upper. Lower = küçük harfler <br> Upper
+			= büyük harfler içindir <br>
+		</p>
+		<pre>
+			<code class="language-php">
+        $metin="merHaba ali Veli Deli haSan";
+        echo     $string->strto_tr_lower_upper('lower',  $metin);
+        echo     $string-> strto_tr_lower_upper('upper',  $metin);
+	</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>strto_tr_lower_upper</h3>
+			<hr class="notop">
+		</div>
+
+		<p>
+			bu metod bir dizgede bulunan büyük veya küçük harflerin tamamını
+			küçük veya büyük harflere türkçe karakterleri bozmadan çevirir. iki
+			parametre alır lower ve upper. Lower = küçük harfler <br> Upper
+			= büyük harfler içindir <br>
+		</p>
+		<pre>
+			<code class="language-php">
+        $metin="merHaba ali Veli Deli haSan";
+        echo     $string->strto_tr_lower_upper('lower',  $metin); 
+        //merhaba ali veli deli hasan
+        
+        echo     $string-> strto_tr_lower_upper('upper',  $metin);
+        //MERHABA ALİ VELİ DELİ HASAN
+	</code>
+		</pre>
+
+
+
+		<div class="page-header">
+			<h3>strtoTrUcFirst</h3>
+			<hr class="notop">
+		</div>
+
+		<p>ucfirst metodu bir dizgenin sadece ilk harfini büyültür ve geri
+			kalanlara karışmaz.</p>
+		<pre>
+			<code class="language-php">
+         $metin = "merHaba ali Veli Deli haSan";
+        echo  $string-> strtoTrUcFirst($metin);
+        //Merhaba ali veli deli hasan
+	</code>
+		</pre>
+
+
+
+		<div class="page-header">
+			<h3>strto_tr_ucwords</h3>
+			<hr class="notop">
+		</div>
+
+		<p>PHP’de ucwords metodu bir dizgede bulunan tüm kelimelerin ilk
+			harfini büyültür ve geri kalanlara karışmaz.</p>
+		<pre>
+			<code class="language-php">
+         $metin = "merHaba ali Veli Deli haSan";
+          echo  $string-> strto_tr_ucwords($metin);
+          //Merhaba Ali Veli Deli Hasan
+	</code>
+		</pre>
+
+	</div>
+</div>

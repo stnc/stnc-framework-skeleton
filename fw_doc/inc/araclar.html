@@ -1,0 +1,171 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3>Tools Sınıfı</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<p>Araçlar sınıfı sürekli olarak kullanıclak araçlar burada yer
+			alacak</p>
+
+
+		<div class="page-header">
+			<h3>printr fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> print_r nin pre tag li olan çıktısı</b>
+
+		<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $data = array(
+            'UrunID' => 02,
+            'UrunAdi' => "çikolata  ",
+            'Resim' => "biskuvi.jpg",
+            'ResimURL' => "biskuvi.jpg",
+            'URL' => "biskuvi.jpg",
+            'Fiyat' => 40.99,
+            "ToplamAdet" => 1,
+            "ToplamFiyat" => ""
+        );
+        $tool->printr($data);
+</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>is_ajax fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> isteğin ajax dan olup olmadığını kontrol eder</b>
+
+		<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->is_ajax();
+</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>fileInfo fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> fonksiyon hakkında bilgi basar</b>
+
+		<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->fileInfo();
+       //çıktısı 
+        /*
+        Namespace: Lib
+Method: Lib\Tools::fileInfo
+Path:D:\EasyPHP-DevServer-14.1VC11\data\localweb\cms\vendor\framework\Library
+File:D:\EasyPHP-DevServer-14.1VC11\data\localweb\cms\vendor\framework\Library\Tools.php
+        
+        */
+        
+</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>clear_cookies fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> tüm cookileri siler</b>
+
+
+
+		<div class="page-header">
+			<h3>token_key_olustur fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> rastgele şifre token key uretir</b>
+		
+				<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->token_key_olustur();
+   //qta97tbwtkx1sj4z0qjct 
+</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>getRealIpAddr() fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> kişinin gerçek  ip adresini verir</b>
+		
+				<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->getRealIpAddr();
+</code>
+		</pre>
+
+
+
+		<div class="page-header">
+			<h3>currentPageURL() fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> sayfanın aktif url adresini verir</b>
+		
+				<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->currentPageURL();
+</code>
+		</pre>
+		
+		
+		
+				<div class="page-header">
+			<h3>curPageName() fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> sayfa ismini verir</b>
+		
+				<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->curPageName();
+        //sonuc index.php
+</code>
+		</pre>
+		
+		
+						<div class="page-header">
+			<h3> cleanString() fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+		<b> SQL injection a karşı koruma sağlamak içindir </b>
+		
+				<pre>
+			<code class="language-php">
+        $tool = new \Lib\Tools();
+        $tool->cleanString();
+</code>
+		</pre>
+		
+		
+	</div>
+</div>

@@ -1,0 +1,77 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3>Debugbar  Sınıfı</h3>
+			<hr class="notop">
+		</div>
+
+
+
+	<ul>
+	<li>Php hata ayıklama çubuğu</li>
+	<li>Herhangi bir proje ile kolay entegrasyonu yapılır  </li>
+	<li>Temiz, hızlı ve kullanımı kolay arayüzü vardır  </li>
+	<li>AJAX isteğini kontrol eder </li>
+	<li>Iyi bilinen kütüphaneler için genel veri toplayıcıları ve toplayıcıları içerir</li>
+	<li>Istemci tarafı bar javascript 100 kodlu</li>
+	<li>Kolayca kendi toplayıcıları ve barda bunlarla ilişkili görünüm oluşturabilirsiniz</li>
+	<li>Kaydedilebilir  ve yeniden açılabılır istekler</li>
+	</ul>
+	
+	<a href="http://phpdebugbar.com/docs/">Ayrıntılı bilgi ve dökümanı için okuyunuz</a>
+<img src="https://camo.githubusercontent.com/c0771cf72001176e705acc53157f1d5a810f8e7b/68747470733a2f2f7261772e6769746875622e636f6d2f6d6178696d6562662f7068702d64656275676261722f6d61737465722f646f63732f73637265656e73686f742e706e67">
+
+
+		<div class="page-header">
+			<h3>head_view</h3>
+			<hr class="notop">
+		</div>
+
+
+		<b> bunu head dosyasına koymanız tavsiye edilir</b>
+
+		<pre>
+			<code class="language-php">
+use DebugBar\StandardDebugBar;
+
+    $debugbar = new StandardDebugBar();
+    $debugbarRenderer = $debugbar->getJavascriptRenderer();
+
+</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>footer_view</h3>
+			<hr class="notop">
+		</div>
+
+		<b>bunu footer dosyasına koymanız tavsiye edilir </b>
+
+		<pre>
+			<code class="language-php">
+use DebugBar\StandardDebugBar;
+
+    $debugbar = new StandardDebugBar();
+    $debugbarRenderer = $debugbar->getJavascriptRenderer();
+    $r = 'emlak-konut?a1966=false&a22=38503&a22=38506&a22=38504&a23=38517&a23=38514&a23=284406&a23=38511&a811=40594&a810=40584&query_text=kiralık+evler&a20=38484';
+    parse_str($r, $arr1);
+    $s = 'page=t/t-shirts?filters%5B%5D%5Bprice%5D=0%7C2000&filters%5B%5D%5Bprice%5D=2001%7C5000&filters%5B%5D%5Bcolor%5D=Red&filters%5B%5D%5Bcolor%5D=Blue&q=&search_param=';
+    parse_str($s, $arr);
+    $debugbar["messages"]->addMessage($arr);
+    $debugbar["messages"]->addMessage($arr1);
+    echo $debugbarRenderer->render();
+
+</code>
+		</pre>
+
+
+
+
+
+	</div>
+</div>

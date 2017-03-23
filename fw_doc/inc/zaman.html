@@ -1,0 +1,175 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+
+		<div class="page-header">
+			<h3>Zaman SINIFI</h3>
+			<hr class="notop">
+		</div>
+		<b>zaman ve tarih olayları </b> <br>
+		<div class="alert alert-danger">Genel olarak geliştirilmiştir
+		ornekcontroller dosyasında örnekleri yapılmıştır 
+		</div>
+
+
+		<div class="page-header">
+			<h3>aylar fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<p>Select listlerde ayları döndürmek içindir</p>
+		<pre>
+	   <code class="language-php">
+        $zaman = new \Lib\ZamanOlaylari();
+        print_r ($zaman->Aylar() );      
+		//çıktısı 
+		Array
+		(
+		    [01] => Ocak
+		    [02] => Şubat
+		    [03] => Mart
+		    [04] => Nisan
+		    [05] => Mayıs
+		    [06] => Haziran
+		    [07] => Temmuz
+		    [08] => Ağustos
+		    [09] => Eylül
+		    [10] => Ekim
+		    [11] => Kasım
+		    [12] => Aralık
+		)
+		</code>
+		</pre>
+
+	
+		<div class="page-header">
+			<h3>hangi_ay_tr fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<p>ayın sayı değerini yazı olarak verir
+    </p>
+		<pre>
+	   <code class="language-php">
+        $zaman = new \Lib\ZamanOlaylari();
+     echo $zaman->hangi_ay_tr ("02");
+     // sonuc şubat
+		</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>hangi_gun_tr fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<b>ingilizce gunun türkçe karşılığını verir<b>
+
+		<pre>
+	   <code class="language-php">
+        $zaman = new \Lib\ZamanOlaylari();
+     echo $zaman->hangi_gun_tr("Monday"); 
+     //sonuc pazartesi
+		</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>hangi_gun_tr fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<b>bugunkü tarihden kaç gün sonrasını gormek isterseniz onu yazınız<b>
+
+		<pre>
+	   <code class="language-php">
+   	   $zaman = new \Lib\ZamanOlaylari();
+        
+        echo $zaman->kacGunsonrasi(2);
+        
+        //snuc 25 Ekim Pazar
+		</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>sql2tr_Date fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<b>veritabnındaki msql formatlı tarihi türkiye tipine cevirir<b>
+
+		<pre>
+	   <code class="language-php">
+
+        echo $zaman->sql2tr_Date("2014-04-25");
+        // sonuc 25-04-2014
+		</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>tr2sql_DateTimefonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<b>Türkiye tarihini veritabanındaki mysql formatlı tipe cevirir<b>
+
+		<pre>
+	   <code class="language-php">
+
+       $zaman = new \Lib\ZamanOlaylari();
+        
+        echo $zaman->tr2sql_DateTime("25-04-2014 15:40:15"); 
+        //sonuc 2014-04-25 15:40:15
+		</code>
+		</pre>
+        
+        		<div class="page-header">
+			<h3>sql2tr_DateTime_GunAy</h3>
+			<hr class="notop">
+		</div>
+        
+       <b>veritabnındaki msql formatlı tarihi türkiye tipine yazılı olarak cevirir<b>
+		<pre>
+	   <code class="language-php">
+
+           $zaman = new \Lib\ZamanOlaylari();
+        echo $zaman->sql2tr_DateTime_GunAy("2015-08-29 11:00:15");
+   //     sonuc: 29 Ağustos 2015 Pazartesi 11:00
+		</code>
+		</pre>
+		
+		
+		
+		<div class="page-header">
+			<h3>tr2sql_DateTimefonksiyonu</h3>
+			<hr class="notop">
+		</div>
+		
+		<b>Verilen tarihin hangi güne denk geldiğini bulur<b>
+		<pre>
+	   <code class="language-php">
+		$zaman = new \Lib\ZamanOlaylari();
+		
+        echo $zaman->TarihHangiGun('2015-08-29','-'); //sonuç :Monday
+		</code>
+		</pre>
+		
+
+	</div>
+</div>

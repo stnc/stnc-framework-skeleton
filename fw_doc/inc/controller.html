@@ -1,0 +1,67 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3>Controller Nedir?</h3>
+			<hr class="notop">
+		</div>
+		
+		
+		
+		Controller URI ile bağlı gelen basit bir sınıfın ismidir.
+
+URI'yi düşünün:
+<pre><code class="language-php">example.com/blog/</code></pre>
+Yukarıdaki örnekte, STNCFW blog.php isimli controllerı bulup yüklemeyi dener.
+
+<div class="page-header">
+			<h3>  Merhaba Dünya!</h3>
+			<hr class="notop">
+</div>
+
+<p> Bu bir controller yapalım  ve sonucu görelim.
+<br> 
+Metin düzenleyicisini kullanarak OrnekController.php isimli bir dosya oluşturalım  ve aşağıdaki kodları içine ekleyim:</p>
+
+<pre><code class="language-php">
+namespace Controllers;
+
+// controller namespace ini kullanacağımı bildirdim
+use \Core\Controller as controller;
+
+class OrnekController extends controller
+{
+    /**
+     * Ornek 1: kontroller ve router orneği
+     * ekrana merhaba dunya yazdırır
+     */
+    public function index()
+    {
+    	//değişmez yazımız 	
+        echo 'Merhaba Dunya!';
+    }
+
+}
+</code></pre>
+
+<h1>Dikkat </h1>
+		<div class='alert alert-danger'>
+			<ul>
+			<li>OrnekController isimli dosyasının linux işletim sistemde çalışması için ilk harfi büyük olmak zorundadır </li>
+			<li>OrnekController.php dosyasının ismi  ile class ın ismi bire bir aynı olmalıdır  </li>
+			</ul>
+		</div>
+<br/>
+<p>
+
+Daha sonra dosyanı app/controllers/ dizini altına kayıt et.
+<br/>
+Şimdi siteni aşağıdaki URL ile ziyaret et:
+<pre><code class="language-php">
+http://cms.dev/merhaba
+</code></pre>
+</div>
+	</div>

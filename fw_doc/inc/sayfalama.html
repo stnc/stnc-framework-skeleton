@@ -1,0 +1,66 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+
+		<div class="page-header">
+			<h3>Sayfalama SINIFI</h3>
+			<hr class="notop">
+		</div>
+		<b>Sayfalama sistemi için kullanılır</b> <br>
+
+
+
+		<div class="page-header">
+			<h3>Örnek Gösterim</h3>
+			<hr class="notop">
+		</div>
+
+
+
+
+		<pre>
+	   <code class="language-php">
+« Önceki   <  1 2 3 4 5 >  Sonraki »
+		</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>Sayfalama Fonksiyonu</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<p>ayın sayı değerini yazı olarak verir</p>
+
+		<pre>
+	   <code class="language-php">
+		$pages = new \Lib\Paginator('20', 'page');
+        $toplam_urun="50";//burası modelden gelebilir
+        $pages->setTotal($toplam_urun);//toplam ürün adetini verir 
+        $pagination = \Helpers\URL_Helper::PaginationLink();//link içindeki gereksizleri temizler 
+        $data['urun_sayfalama_linkler'] = $pages->pageLinks($pagination); //view e gidecek olan kısım 
+        View::Render('ornekler/data_aktarimi_db_view', $data);//view 
+	  </code>
+	</pre>
+
+
+
+		<b> ornekler/data_aktarimi_db_view.php </b>
+		<pre>
+	   <code class="language-php">
+		echo $data['urun_sayfalama_linkler'];
+	  </code>
+	</pre>
+
+
+
+
+
+	</div>
+</div>
