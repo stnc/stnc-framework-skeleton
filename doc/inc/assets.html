@@ -1,0 +1,45 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3> Asset Yapısı  </h3>
+			<hr class="notop">
+		</div>
+		
+
+
+<p>CSS ve JS dosyalarını tek bir yapıdan çekip sisteme yüklemesi için yapıldı 
+<br>
+
+<div class="alert alert-danger">
+asıl amacı js dosyalarını kendi içinde sıkıştırıp tel bir dosya olarak vermesiydi 
+fakat yetişmedi 
+
+
+</div>
+ </p>
+
+<pre><code class="language-php">
+//css orneği bunlar head_view gibi yerlerde kullanmak içindir 
+Lib\Assets::css(array(
+    '//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css',
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css',
+    Lib\Url::publicPath() . '/css/my.css'
+));
+
+//js orneği 
+Lib\Assets::js(array(
+    Lib\Url::publicPath() . '/js/script.js'
+));
+
+
+
+      
+</code></pre>
+
+	
+</div>
+</div>

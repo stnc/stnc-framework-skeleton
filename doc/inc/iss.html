@@ -1,0 +1,62 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+				<div class="page-header">
+			<h3> IIS Kurulum</h3>
+			<hr class="notop">
+		</div>
+		
+		<p>IIS için URL Rewrite modulünü kurunuz - <a href='http://www.iis.net/downloads/microsoft/url-rewrite'>http://www.iis.net/downloads/microsoft/url-rewrite</a></p>
+
+		<p> IIS için htaccess dosyasını  web.config e aşağıdaki gibi çeviriniz</p>
+
+		<!-- <pre><code class="language-javascript">
+<?php ob_start();?>
+<configuration>
+    <system.webserver>
+        <directorybrowse enabled="true"/>
+	    <rewrite>
+	    	<rules>
+	    		<rule name="rule 1p" stopprocessing="true">
+					<match url="^(.+)/$"/>
+					<action type="Rewrite" url="/{R:1}"/>
+				</rule>
+				<rule name="rule 2p" stopprocessing="true">
+					<match url="^(.*)$"/
+					<action type="Rewrite" url="/index.php?{R:1}" appendquerystring="true"/>
+				</rule>
+			</rules>
+		</rewrite>
+	</system.webserver>
+</configuration>
+<?php echo htmlspecialchars(ob_get_clean());?>
+		</code></pre>
+		
+-->
+
+		<textarea style="margin: 0px; width: 1387px; height: 364px;">
+
+<configuration>
+    <system.webserver>
+        <directorybrowse enabled="true"/>
+	    <rewrite>
+	    	<rules>
+	    		<rule name="rule 1p" stopprocessing="true">
+					<match url="^(.+)/$"/>
+					<action type="Rewrite" url="/{R:1}"/>
+				</rule>
+				<rule name="rule 2p" stopprocessing="true">
+					<match url="^(.*)$"/
+					<action type="Rewrite" url="/index.php?{R:1}" appendquerystring="true"/>
+				</rule>
+			</rules>
+		</rewrite>
+	</system.webserver>
+</configuration>
+
+		</textarea>		
+</div>
+</div>

@@ -1,0 +1,41 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3> Apache htacces yapılandırması </h3>
+			<hr class="notop">
+		</div>
+		
+
+
+		<p>özel bir ayarlamaya gerek olmadan Apache htacces yapılandırması aşağıdaki gibidir.</p>
+
+<pre><code class="language-php">
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+  
+  #comment out to keep trailing slashes
+  #yorum dışı işaretleri at 
+  RewriteRule ^(.+)/$ $1 [R=307,L]
+  
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  
+  RewriteRule ^(.*)$ index.php?$1 [QSA,L]
+
+</IfModule>
+
+</code></pre>
+	
+Eğer virtual host yapısı ile çalışırsanız,
+ sitenin tam yapılandırması ve gerçekçi çalışma sistemini test edebilirsiz 
+	
+</div>
+</div>

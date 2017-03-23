@@ -1,0 +1,133 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3> Routing </h3>
+			<hr class="notop">
+		</div>
+		
+
+
+		<p>routing yapısı url yonlendirme amaçlı kullanım içindir,gelen url isteğini gerekli kontroller dosyasına gönderir
+örnek uygulama </p>
+
+<pre><code class="language-php">
+
+new \Core\Config();
+
+// bu kısımda url (router) ayarları yapılır
+use \Core\Router, \Lib\Url;
+
+Router::any('', '\Controllers\Anasayfa@index'); // anasayfa
+Router::any('kurumsal/(:any)', '\Controllers\Sayfalar@sayfa'); // sayfalar içine al anasayfa değil
+Router::any('urunlerliste', '\Controllers\Urunler@TumUrunler'); // tüm ürünleri getirir
+Router::any('ajaxarama', '\Controllers\UrunArama@AjaxUrunArama'); // ajax autocomplte ürün arama için
+Router::any('arama', '\Controllers\UrunArama@UrunArama'); //normal arama //Router::any('arama/(:any)', '\Controllers\Urunler@UrunArama'); //normal arama
+Router::any('urun/(:any)/(:num)', '\Controllers\Urun@UrunDetay'); // urun detay sayfası //urun/profilo-bd-7510-anf-buzdolabi/900122531
+Router::any('sepet/sepet_sil/(:num)', '\Controllers\Sepet@sepet_sil'); // sepete sil yapar
+Router::any('sepet/sepetimSil/(:num)', '\Controllers\Sepet@sepetim_sil'); // sepete sil yapar
+
+/*
+use \Core\View;
+Router::any('test', function() {
+        View::RenderTemplate('head_view');
+        View::RenderTemplate('header_view');
+        View::Render('kargo_secimi\kargo_secimi_view', '','');
+        View::RenderTemplate('footer_view');
+});*/
+     
+
+Router::error('\Controllers\Error@index');
+
+// turn on old style routing
+Router::$fallback = false;
+
+// execute matched routes
+Router::dispatch();
+
+</code></pre>
+		
+
+<pre><code class="language-php">
+Router::any('merhaba', '\Controllers\Ornek@index');
+
+//kontroller dosyası 
+
+class Ornek extends controller
+{
+    public function index()
+    {
+		echo "Merhaba dünya";
+    }
+}
+</code></pre>
+buradaki Ornek ismi kontroller dosyasını işaret eder 
+index ise fonksiyonu işaret eder.
+<br>
+
+buradaki Ornek ismi controller dosyasını işaret eder 
+index ise fonksiyonu işaret eder.
+<br>
+örnek 2 -parametre gonderimleri 
+2 farklı parametre gonderilebilir 
+
+1-any :any içinde herhangi bişey olabilir 
+2-numb :sadece sayı parametresini dikkate alır 
+
+<pre>
+<code class="language-php">
+Router::any('kurumsal/(:any)', '\Controllers\Sayfalar@sayfa');
+ /** kontroller dosyası **/
+class Sayfalar extends controller
+{
+    public function sayfa($param)
+    {
+		echo $param;
+    }
+}
+</code>
+</pre>
+örnek url : www.example.com/kurumsal/merhaba
+
+
+<code class="language-php">
+Router::any('kurumsal/(:any)', '\Controllers\Sayfalar@sayfa');
+ /** kontroller dosyası **/
+class Sayfalar extends controller
+{
+    public function sayfa($param)
+    {
+		echo $param;
+    }
+}
+</code>
+</pre>
+örnek url : www.example.com/kurumsal/merhaba
+
+
+<p><b>Routing yapılandırma</b></p>
+<p></p>
+<p>Örnek
+
+<pre>
+<code class="language-php">
+use core\router as Router;
+</code>
+</pre>
+
+
+<p>Kullanımında  anahtar , keyword \ core \ routers referanslar olabilir..</p>
+
+<p>Buradan ilerisi yeni özeliklere göre  yazılmaya devam edecekdir, aşağıdaki özellikler yapılmış olup dokumana eklenemedi. </p>
+
+<pre>
+<code class="language-php">
+Router::any('', 'closure or controller');
+</code>
+<pre>
+		
+</div>
+	</div>

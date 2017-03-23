@@ -1,0 +1,31 @@
+	<script>
+Prism.highlightAll();
+	</script>
+
+	<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3> Ngix Kurulumu</h3>
+			<hr class="notop">
+		</div>
+		
+
+
+		<p>özel bir ayarlamaya gerek olmadan Nginx and PHP-FPM ayarlaması aşağıdaki gibidir.</p>
+
+<pre><code class="language-php">
+public function add()  {
+         $ok = \Lib\Tools::message_ver('ok', 'Sayfa Başarı ile Eklenmiştir');
+         \Lib\Session::set('message', $ok);	 
+         View::RenderAdmin('posts/add_view', $data, $error);
+    }
+	
+</code>
+</pre>
+view içine eklenecek kod 
+<pre><code class="language-php">
+echo \Lib\Session::pull('message');
+</code></pre>
+		
+</div>
+</div>

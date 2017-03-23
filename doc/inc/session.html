@@ -1,0 +1,83 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3>Session Sınıfı</h3>
+			<hr class="notop">
+		</div>
+
+
+
+		<p>Session, bir oturum nesnesidir. Cookie den daha güvenli olarak
+			bilgi saklamaya ,bilgiye tüm sayfalardan erişmeye yarar</p>
+
+		<br />
+
+		<div class="alert alert-danger"></div>
+
+		<div class="page-header">
+			<h3>session nesnesi oluşturmak</h3>
+			<hr class="notop">
+		</div>
+
+		<pre>
+			<code class="language-php">
+        // ilk olarak use dan tanıtalım 
+        //use \Lib\Session;
+  session::set('message', 'merhaba');
+//message isminde bir session oluşturduk 
+</code>
+		</pre>
+
+
+		<div class="page-header">
+			<h3>session nesnesini okumak</h3>
+			<hr class="notop">
+		</div>
+
+		<pre>
+			<code class="language-php">
+  echo session::get('message');
+//message isminde bir session oluşturduk 
+</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>session nesnesini silmek</h3>
+			<hr class="notop">
+		</div>
+
+		<pre>
+			<code class="language-php">
+  session::pull('message');
+</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>tüm session'ları okumak</h3>
+			<hr class="notop">
+		</div>
+
+		<pre>
+			<code class="language-php">
+    print_r(session::display());
+</code>
+		</pre>
+
+		<div class="page-header">
+			<h3>tüm session'ları silmek</h3>
+			<hr class="notop">
+		</div>
+
+		<pre>
+			<code class="language-php">
+       session::destroy();
+</code>
+		</pre>
+
+	</div>
+</div>

@@ -1,0 +1,66 @@
+
+<script>
+	Prism.highlightAll();
+</script>
+
+<div class="container">
+	<div class="row">
+		<div class="page-header">
+			<h3>Parametre gönderimleri</h3>
+			<hr class="notop">
+		</div>
+		Controller için parametre gönderimleri nasıl yapılır , kontroller içine  
+		örneğin 
+<pre><code class="language-php">http://www.n11.com/cok-satanlar/ev-yasam</code></pre>
+buradaki cok-satanlar fonksiyon  ismidir, buradaki çok satanlar cok_satanlar isimli fonksiyonu işaret eder
+
+
+Controller adı URL'nin ilk parçasındaki isimle eşleştiğinde, yüklenecektir.
+
+		<div class="page-header">
+			<h3>Merhaba dünya denemsi </h3>
+			<hr class="notop">
+		</div>
+<p> 
+Hadi basit bir controller yapalım ve parametre gonderip  sonucu görelim.
+<br> Metin düzenleyicisini kullanarak OrnekController.php isimli bir dosya oluştur ve aşağıdaki kodları içine ekle:
+</p>
+
+<pre><code class="language-php">
+namespace Controllers;
+
+// controller namespace'ini kullanacağımı bildirdim
+use \Core\Controller as controller;
+
+class OrnekController extends controller
+{
+    /**
+     * Ornek 2: router dan parametre gonderimi
+     * Örnek routers parametresi bilgisi
+     */
+    public function routers_parametresi($param)
+    {
+        echo 'Örnek routers parametresi bilgisi ' . $param;
+    }
+
+}
+</code></pre>
+
+<h1>Dikkat </h1>
+		<div class='alert alert-danger'>
+			<ul>
+			<li>OrnekController isimli dosyasının linux işletim sisitemde çalışması için ilk harfi büyük olmak zorundadır </li>
+			<li>OrnekController.php dosyasının ismi  ile class ın ismi bire bir aynı olmalıdır  </li>
+			</ul>
+		</div>
+<br/>
+Daha sonra dosyanı app/controllers/ dizini altına kayıt et.
+<br/>
+Şimdi siteni aşağıdakine benzer URL ile ziyaret et:
+
+<pre><code class="language-php">
+http://cms.dev/merhaba
+</code></pre>
+
+		</div>
+</div>
