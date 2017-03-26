@@ -1,31 +1,22 @@
 <?php
 
-
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(- 1);
 
-// define('BASEPATH', str_replace("\\", "/", $system_path));
-// require_once BASEPATH . 'core/CodeIgniter.php';
-// if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 /**
- * SAVEAS FRAMEWORK
- *
- * Copyright (c) 2015
+ * STNC FRAMEWORK
  *
  * Author(s): Selman TUNÇ www.selmantunc.com <selmantunc@gmail.com>
- * Author(s): YUSUF YALÇIN
- * Author(s): SUAT ERENLER
+ *
  * Licensed under the MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @author Selman TUNÇ <selmantunc@gmail.com>
- * @copyright Copyright (c) 2015 SAVEAS YAZILIM
+ * @copyright Copyright (c) 2017
  * @link http://github.com/stnc
- * @link http://www.saveas.com.tr/
- * @version 2.0.0.1
+ * @version 3.0.0.0
+ * @date 26.03.2017
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License
  */
 
@@ -39,7 +30,7 @@ if (file_exists('vendor/autoload.php')) {
     exit();
 }
 
-if (! is_readable('vendor/framework/Core/Config.php')) {
+if (! is_readable('src/stnc/framework/Core/Config.php')) {
     die('config.php bulunamadı, config.example.php dosyasının ismini değiştirip config.php yapınız ve  app/core. içine atınız ');
 }
 

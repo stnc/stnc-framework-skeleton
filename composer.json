@@ -23,9 +23,9 @@
 			"Models\\" : "app/Models",
 			"Helpers\\" : "app/Helpers",
 			"Views\\" : "app/Views",
-			"Lib\\" : "vendor/framework/Library",
-			"Core\\" : "vendor/framework/Core",
-			"Engine\\" : "vendor/framework/Engine"
+			"Lib\\" : "src/stnc/framework/Library",
+			"Core\\" : "src/stnc/framework/Core",
+			"Engine\\" : "src/stnc/framework/Engine"
 		}
 	},
 	"minimum-stability" : "dev",

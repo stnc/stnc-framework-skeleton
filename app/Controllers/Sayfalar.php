@@ -76,7 +76,7 @@ class Sayfalar extends controller
             $data['content'] = stripslashes($pages['content']);
             $data_head['title'] = $pages['title'];
             $data_head['meta_title'] = substr(stripslashes($pages['description']), 0, 150);
-            $data_head['meta_image'] = DIR . PUBLIC_PATH . "/img/idealcomtrlogo.png";
+            $data_head['meta_image'] = DIR . PUBLIC_PATH . "/img/logo.png";
             $data_head['meta_link'] = \Lib\Tools::currentPageURL();
             
             //menuler

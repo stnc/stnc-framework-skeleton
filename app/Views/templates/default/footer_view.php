@@ -13,7 +13,7 @@
 	<div class="pull-right hidden-xs">
 		<b>Version</b> 3
 	</div>
-	<strong>SAVE AS FRAMEWORK  </a>.
+	<strong>STNC FRAMEWORK  </a>.
 	</strong> All rights reserved.
 </footer>
 

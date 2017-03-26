@@ -61,8 +61,8 @@ if (defined('ENVIRONMENT')) {
 }
 
 
-define('DIR', 'http://cms.dev/');
-define('RuntimePath', 'cms.dev');
+define('DIR', 'http://cms.localhost/');
+define('RuntimePath', 'cms.localhost');
 define('PUBLIC_PATH', 'public');
 define('PUBLIC_URL', DIR.'/'.PUBLIC_PATH.'/');//reklamlar alanı içindir
 

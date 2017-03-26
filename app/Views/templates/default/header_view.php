@@ -12,7 +12,6 @@
                     <a href="/sayfa/urunler"> <?php echo $urunler?></a>
                     <a href="/sayfa/markalar"><?php echo $markalar?></a>
                     <a href="/sayfa/satis"><?php echo $satis?></a>
-                    <a target="_blank" href="https://ideal.com.tr/onceki_site/index.php?s=insan_kaynaklari"><?php echo $kariyer?></a>
                     <a href="\iletisim">İLETİŞİM</a>
                 </div>
             </div>

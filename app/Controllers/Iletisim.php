@@ -1,7 +1,7 @@
 <?php
 namespace Controllers;
 
-use \Core\View, 
+use \Core\View;
 use \Core\Controller as controller;
 use Lib\Url;
 use Lib\Session;
