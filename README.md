@@ -10,7 +10,7 @@ http://cms.localhost/admin ile paneline ulaşabilirsiniz
 
 
 ## Dökümantasyon 
-En kısa sürede git lab a ekleyeceğim , şimdilik doc/index.html den okyabilirsiniz. 
+En kısa sürede wiki ye ekleyeceğim , şimdilik doc/index.html den okyabilirsiniz. 
 içinde çoklu dil desteği ve shopping cart özelliğide bulunmaktadır 
 <br>
 ## API Dökümantasyon 
