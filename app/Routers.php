@@ -64,8 +64,7 @@ Router::any('dil', '\Controllers\ornekController@dil');//http://cms.dev/dil
 // hata sayfası url bulunmazsa bu sayfaya gider
 Router::error('\Controllers\Error@index');
 
-// turn on old style routing
-Router::$fallback = false;
+
 
 // execute matched routes
 Router::dispatch();

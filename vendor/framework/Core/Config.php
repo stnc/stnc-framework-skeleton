@@ -13,8 +13,8 @@ class Config
         require_once ("app/Config.".$path_config.".php");
         
         // hata yakalama ayarları
-        set_exception_handler('Core\Logger::exceptionHandler');
-        set_error_handler('Core\Logger::errorHandler');
+       // set_exception_handler('Core\Logger::exceptionHandler');
+      //  set_error_handler('Core\Logger::errorHandler');
         
         // sessions başlat
         \Lib\Session::init();

@@ -49,7 +49,8 @@ class Logger
      */
     public static function exceptionHandler($e)
     {
-        self::newMessage($e);
+        print_r ($e);
+        self::newMessage();
         self::customErrorMsg();
     }
 
@@ -79,7 +80,7 @@ class Logger
 
     /**
      * TODO: bu kısımları sonradan ekledim sisteme bağlı değiller henuz
-     *
+     * @add php 7 and php 5.x support
      * @param Exception $exception
      * @param boolean $print_error
      *            show error or not
@@ -88,13 +89,24 @@ class Logger
      * @param string $error_file
      *            file to save to
      */
-    public static function newMessage(Exception $exception, $print_error = false, $clear = false, $error_file = 'errorlog.html')
+    public static function newMessage( $print_error = false, $clear = false, $error_file = 'errorlog.html')
     {
-        $message = $exception->getMessage();
-        $code = $exception->getCode();
-        $file = $exception->getFile();
-        $line = $exception->getLine();
-        $trace = $exception->getTraceAsString();
+
+
+        try {
+            // Code that may throw an Exception or Error.
+        } catch (Throwable $t) {
+            // Executed only in PHP 7, will not match in PHP 5.x
+        } catch (Exception $e) {
+            // Executed only in PHP 5.x, will not be reached in PHP 7
+            $message = $exception->getMessage();
+            $code = $exception->getCode();
+            $file = $exception->getFile();
+            $line = $exception->getLine();
+            $trace = $exception->getTraceAsString();
+        }
+
+
         $date = date('M d, Y G:iA');
         
         $log_message = "<h3>Hata Bilgisi:</h3>\n
