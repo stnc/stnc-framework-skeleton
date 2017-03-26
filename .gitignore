@@ -4,5 +4,10 @@ Turkce_cms.rar
 .buildpath
 cms.dev.7z
 .idea/workspace.xml
+<<<<<<< HEAD
 vendor/
 cms.devV2.7z
+=======
+cms.devV2.7z
+vendor/
+>>>>>>> 4fb21851dc7d9fd0dfbd7008f5c0322c5a7204e1

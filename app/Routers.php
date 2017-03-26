@@ -2,7 +2,8 @@
 new \Core\Config();
 //TODO : çok fazla routers var kurtulmak gerek
 // bu kısımda url (router) ayarları yapılır
-use \Core\Router, \Lib\Url;
+use \NoahBuscher\Macaw\Macaw as Router;
+use  \Lib\Url;
 
 Router::any('', '\Controllers\Sayfalar@sayfa'); // anasayfa
 
