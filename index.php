@@ -26,7 +26,8 @@ if (file_exists('vendor/autoload.php')) {
 } else {
     echo "<h1>Lütfen composer.json ı yükleyin </h1>";
     echo "<p>Örnekler <a href='https://getcomposer.org/doc/00-intro.md#globally'>https://getcomposer.org/doc/00-intro.md#globally</a></p>";
-    echo "<p> terminal/cmd yi açarak  'composer install' yazınız</p>";
+    echo "<p> terminal yada cmd yi açarak  'composer install' yazınız</p>";
+    echo "<p> eğer yuklü ise terminal yada cmd yi açarak  'composer update' yazınız</p>";
     exit();
 }
 
