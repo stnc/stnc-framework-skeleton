@@ -11,7 +11,7 @@ http://cms.localhost/admin ile paneline ulaşabilirsiniz
 
 ## Dökümantasyon 
 En kısa sürede git lab a ekleyeceğim , şimdilik doc/index.html den okyabilirsiniz. 
-içinde çoklu dil desteği ve shooping car tözelliğide bulunmaktadır 
+içinde çoklu dil desteği ve shopping cart özelliğide bulunmaktadır 
 <br>
 ## API Dökümantasyon 
 Framework ü indirip doc/phpdocs klasorundeki php doc belegelerini inceleyebilirsiniz.
