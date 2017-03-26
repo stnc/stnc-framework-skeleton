@@ -19,4 +19,3 @@ Framework ü indirip doc/phpdocs klasorundeki php doc belegelerini inceleyebilir
 ## Diğer 
 version 3.0.0.0
 date 26.03.2017
-
