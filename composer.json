@@ -1,7 +1,7 @@
 {
-	"name" : "STNC PHP Framework 3.0",
+	"name" : "stnc/stnc-easy-php-framework",
 	"type" : "project",
-	"description" : "STNC Framework",
+	"description" : "STNC PHP Framework 3.0",
 	"homepage" : "https://github.com/stnc",
 	"authors" : [{
 			"name" : "Selman TUNÇ ",
