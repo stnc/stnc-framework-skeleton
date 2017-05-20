@@ -27,7 +27,6 @@
 			"Core\\" : "src/stnc/framework/Core",
 			"Engine\\" : "src/stnc/framework/Engine"
 		}
-	},
-	"minimum-stability" : "dev",
-	"prefer-stable" : true
+	}
+	
 }
