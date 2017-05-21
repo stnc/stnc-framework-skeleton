@@ -15,7 +15,8 @@
 		"maximebf/debugbar" : "1.*",
 		"symfony/http-foundation" : "2.6.*@dev",
 		"noahbuscher/macaw": "dev-master",
-		"phpmailer/phpmailer" : "dev-master"
+		"phpmailer/phpmailer" : "dev-master",
+		"stnc/pdo-database" : "dev-master"
 	},
 	"autoload" : {
 		"psr-4" : {
