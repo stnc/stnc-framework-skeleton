@@ -30,10 +30,18 @@ class View {
 	 *        	hatalar array olarak gelir
 	 */
 	public static function Render($path, $data = false, $error = false) {
-		if ($data)
+		 if (!SMARTY_ENGINE_STATUS) {
+			if ($data)
 			extract ( $data );
-		
-		require "app/Views/$path.php";
+			require "app/Views/$path.php";
+		 } else {		
+			$smarty = new \Smarty;
+			$smarty->template_dir = 'app/Views';
+			$smarty->compile_dir = 'public/smarty/templates_c/';
+			$smarty->cache_dir = 'public/smarty/cache/';
+			$smarty->assign("data", $data);
+			$smarty->display("$path.php.tpl");
+		 }
 	}
 	
 	/**

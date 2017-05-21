@@ -16,7 +16,8 @@
 		"symfony/http-foundation" : "2.6.*@dev",
 		"noahbuscher/macaw": "dev-master",
 		"phpmailer/phpmailer" : "dev-master",
-		"stnc/pdo-database" : "dev-master"
+		"stnc/pdo-database" : "dev-master",
+		 "smarty/smarty": "~3.1"
 	},
 	"autoload" : {
 		"psr-4" : {

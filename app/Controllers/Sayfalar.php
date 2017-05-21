@@ -88,9 +88,6 @@ class Sayfalar extends controller
             $data_header['kariyer']=$lng->get('kariyer');
             $data_header['iletisim']=$lng->get('iletisim');
             
-
-            
-            
             View::RenderTemplate('head_view', $data_head);
             View::RenderTemplate('header_view',$data_header);
             View::Render('sayfa/index_view', $data);

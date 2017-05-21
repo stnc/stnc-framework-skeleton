@@ -59,7 +59,7 @@ if (defined('ENVIRONMENT')) {
             exit('Uygulamanın çalışma ortamını ayarlayınız');
     }
 }
-
+define('SMARTY_ENGINE_STATUS', true); //memcache aktif olup olmayacağını belirtir 
 
 define('DIR', 'http://cms.dev/');
 define('RuntimePath', 'cms.localhost');
