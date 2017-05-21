@@ -94,6 +94,12 @@ class Iletisim extends controller
             $lng->defaultLanguage=$lang;
         }
         
+
+$data['send'] = $this->request->get('ad_soyad');
+$data['email'] = $this->request->get('email');
+$data['phone'] = $this->request->get('phone');
+$data['message'] = $this->request->get('message');
+		
         $lng->load('header');
         //menuler
         $data_header['kurumsal']=$lng->get('kurumsal');
