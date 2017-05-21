@@ -39,7 +39,7 @@ abstract class Model extends Controller
     {
 
         // PDO bağlantısı yapılır
-        $this->_db = \Lib\Database::get();
+        $this->_db =  new \stnc\db\MysqlAdapter();
         if (MEMCACHED_STATUS) {
             $this->memcache_connnect();
         }
