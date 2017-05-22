@@ -4,9 +4,9 @@
 temrinalde 
 ```php composer update   ```
  yazarak kullanıma hazır hale gelir 
-web site adresi default olarak http://cms.localhost/ ayarlanmıştır 
+web site adresi default olarak http://cms.dev/ ayarlanmıştır 
 \app\Config.cms.localhost.php  dosyasından gerekli ayarlamaları yapınız mysql ve web domain name
-http://cms.localhost/admin ile paneline ulaşabilirsiniz 
+http://cms.dev/admin ile paneline ulaşabilirsiniz 
 
 
 ## Dökümantasyon 
