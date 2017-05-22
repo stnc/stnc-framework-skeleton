@@ -1,4 +1,4 @@
-# STNC php easy framework
+# STNC framework skeleton
 ## composer tabanlı basit genişletebilir php framework
 ## kurulum ve kullanım 
 temrinalde 
