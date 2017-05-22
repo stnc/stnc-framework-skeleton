@@ -17,5 +17,5 @@ içinde çoklu dil desteği ve shopping cart özelliğide bulunmaktadır
 Framework ü indirip doc/phpdocs klasorundeki php doc belegelerini inceleyebilirsiniz.
 
 ## Diğer 
-version 3.0.0.0
-date 26.03.2017
+version 3.2.0
+date 22.05.2017
