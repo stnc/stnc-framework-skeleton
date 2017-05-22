@@ -31,7 +31,7 @@ if (file_exists('vendor/autoload.php')) {
     exit();
 }
 
-if (! is_readable('src/stnc/framework/Core/Config.php')) {
+if (! is_readable('vendor/stnc/framework/src/Core/Config.php')) {
     die('config.php bulunamadı, config.example.php dosyasının ismini değiştirip config.php yapınız ve  app/core. içine atınız ');
 }
 

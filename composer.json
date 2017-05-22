@@ -1,7 +1,7 @@
 {
 	"name" : "stnc/stnc-easy-php-framework",
 	"type" : "project",
-	"description" : "STNC PHP Framework 3.0",
+	"description" : "STNC PHP Framework Skeleton",
 	"homepage" : "https://github.com/stnc",
 	"authors" : [{
 			"name" : "Selman TUNÇ ",
@@ -11,24 +11,17 @@
 		}
 	],
 	"require" : {
-		"php" : ">=5.3.0",
-		"maximebf/debugbar" : "1.*",
-		"symfony/http-foundation" : "2.6.*@dev",
-		"noahbuscher/macaw": "dev-master",
-		"phpmailer/phpmailer" : "dev-master",
-		"stnc/pdo-database" : "dev-master",
-		 "smarty/smarty": "~3.1"
+		"php" : ">=5.6.4",
+		"stnc/framework" : "dev-master"
 	},
 	"autoload" : {
 		"psr-4" : {
 			"Controllers\\" : "app/Controllers",
 			"Models\\" : "app/Models",
 			"Helpers\\" : "app/Helpers",
-			"Views\\" : "app/Views",
-			"Lib\\" : "src/stnc/framework/Library",
-			"Core\\" : "src/stnc/framework/Core",
-			"Engine\\" : "src/stnc/framework/Engine"
+			"Views\\" : "app/Views"
 		}
-	}
-	
+	},
+	 "minimum-stability": "dev",
+     "prefer-stable": true
 }
