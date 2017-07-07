@@ -105,13 +105,9 @@ define('SESSION_PREFIX', 'st_');
 // web site varsayaln bağşlığı
 define('SITETITLE', ' Web Admin Panel');
 
-define('SIRKET_ISMI', 'SAĞDIÇLAR İDEAL GIDA SAN VE DIŞ TİC A.Ş.');
+define('SIRKET_ISMI', 'selman tunç aş.');
 
-define('SIRKET_ADRES_BILGILERI', 'Madenler Mah. Alemdağ Cad. Arafat Sok. No:2<br>
-Ümraniye <br>
-İstanbul, Türkiye<br>
-Telefon: (0216) 364 24 37-38-39 <br>
-Faks: (0216) 364 24 33<br>');
+define('SIRKET_ADRES_BILGILERI', 'beşikltaş /istanbul');
 
 
 
