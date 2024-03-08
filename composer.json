@@ -22,6 +22,5 @@
 			"Views\\" : "app/Views"
 		}
 	},
-	 "minimum-stability": "dev",
      "prefer-stable": true
 }
